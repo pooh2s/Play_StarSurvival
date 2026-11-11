@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#14110d" />
+    <link rel="icon" href="data:," />
+    <title>StarSurvival</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #000;
+        overflow: hidden;
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #app {
+        position: relative;
+        height: 100vh;
+        height: 100dvh;
+        width: 100vw;
+      }
+      /* 세로 고정: 가로로 넓은 화면(PC 브라우저)에서는 9:16 영역만 사용.
+         가로 모드 출시 시 body의 portrait-lock 클래스만 제거하면 됨 (UI는 가장자리 앵커 배치). */
+      body.portrait-lock #app {
+        width: min(100vw, calc(100dvh * 9 / 16));
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-ClETZaQd.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index--8swpuBR.css">
+  </head>
+  <body class="portrait-lock">
+    <div id="app"></div>
+  </body>
+</html>
